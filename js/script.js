@@ -26,11 +26,11 @@
 		// 	updateUIFailure();
 		// });
 
-		fetch(url + location + '&appid=' + apiKey).then(function(response) {
-			updateUISuccess(response);
-		}).catch(function() {
-			updateUIFailure();
-		});
+		fetch(url + location + '&appid=' + apiKey)
+		
+		.then(updateUISuccess)
+		
+		.catch(updateUIFailure);
 	});
 
 	// update list of sports when user selects a different category (solo/team/all)
