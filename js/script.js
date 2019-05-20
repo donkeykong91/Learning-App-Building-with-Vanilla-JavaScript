@@ -64,7 +64,7 @@
 		// const $into = $('.conditions')[0];
 		const into = document.querySelector('.conditions');
 
-		ReactDOM.render(<Forecast {...state} />, $into);
+		ReactDOM.render(<Forecast {...state} />, into);
 
 		function Forecast(props) {
 			return (
