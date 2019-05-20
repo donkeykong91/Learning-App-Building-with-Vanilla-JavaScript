@@ -61,7 +61,8 @@
 			city: response.name
 		};
 
-		const $into = $('.conditions')[0];
+		// const $into = $('.conditions')[0];
+		const into = document.querySelector('.conditions');
 
 		ReactDOM.render(<Forecast {...state} />, $into);
 
