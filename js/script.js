@@ -116,7 +116,7 @@
 		}
 
 		// const $into = $('.activities')[0];
-		const into = document.querySelector('activities');
+		const into = document.querySelector('.activities');
 
 		// ReactDOM.render(<Activities {...state} />, $into);
 		ReactDOM.render(<Activities {...state} />, into);
