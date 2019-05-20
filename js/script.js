@@ -2,7 +2,7 @@
 
 (function() {
 	const url = "http://api.openweathermap.org/data/2.5/weather?q=";
-	const apiKey = "APIKEY"; // Replace "APIKEY" with your own API key; otherwise, your HTTP request will not work
+	const apiKey = "eb2716726491d118211a456416acbdde"; // Replace "APIKEY" with your own API key; otherwise, your HTTP request will not work
 	const activities = {
 		teamIn: ['basketball','hockey','volleyball'],
 		teamOutWarm: ['softball/baseball','football/soccer','American football','rowing','tennis','volleyball','ultimate frisbee','rugby'],
@@ -27,6 +27,8 @@
 		// });
 
 		fetch(url + location + '&appid=' + apiKey)
+
+		.then(getJsonData)
 		
 		.then(updateUISuccess)
 		
@@ -35,6 +37,13 @@
 
 	// update list of sports when user selects a different category (solo/team/all)
 	$('.options div').on('click', updateActivityList);
+
+	function getJsonData(response) {
+
+		return (response.json());
+
+
+	}
 
 	// handle ajax success
 	function updateUISuccess(response) {
